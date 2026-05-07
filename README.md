@@ -68,20 +68,20 @@
               ┌──────┴──────────┴──────┐
               │      PIC16F877A        │
               │                        │
-  LCD D0-D7 ──┤ RB0-RB7               │
-   LCD RS   ──┤ RD6        RC0 ├──── Row 1 (Keypad)
-   LCD EN   ──┤ RD7        RC1 ├──── Row 2 (Keypad)
-              │            RC2 ├──── Row 3 (Keypad)
-              │            RC3 ├──── Row 4 (Keypad)
-       5V ───[10k]─────── RC4 ├──── Col 1 (Keypad)
-       5V ───[10k]─────── RC5 ├──── Col 2 (Keypad)
-       5V ───[10k]─────── RC6 ├──── Col 3 (Keypad)
-       5V ───[10k]─────── RC7 ├──── Col 4 (Keypad)
+  LCD D0-D7 ──┤ RB0-RB7                │
+   LCD RS   ──┤ RD6                RC0 ├──── Row 1 (Keypad)
+   LCD EN   ──┤ RD7                RC1 ├──── Row 2 (Keypad)
+              │                    RC2 ├──── Row 3 (Keypad)
+              │                    RC3 ├──── Row 4 (Keypad)
+       5V ───[10k]───────          RC4 ├──── Col 1 (Keypad)
+       5V ───[10k]───────          RC5 ├──── Col 2 (Keypad)
+       5V ───[10k]───────          RC6 ├──── Col 3 (Keypad)
+       5V ───[10k]───────          RC7 ├──── Col 4 (Keypad)
               │                        │
-   10kΩ ─── MCLR        OSC1 ├──┐
-              │            OSC2 ├──┼── Crystal 20MHz
-              │                  └──┼── 22pF × 2 → GND
-              └────────────────────┘
+   10kΩ ─── MCLR                  OSC1 ├──┐
+              │                   OSC2 ├──┼── Crystal 20MHz
+              │                        └──┼── 22pF × 2 → GND
+              └────────────────────────┘
 ```
 
 ---
