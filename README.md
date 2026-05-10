@@ -1104,4 +1104,4 @@ while(1) {
 
 
 *This project was Developed and engineered by Titonix.*
-![Circuit Diagram](Titonix.png)
+![Circuit Diagram](titonix.png)
