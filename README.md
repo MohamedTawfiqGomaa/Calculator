@@ -847,6 +847,7 @@ while(1) {
               VSS  ┤19 GND      RD6 27      ├─── LCD RS
               VDD  ┤20 5V       RD7 28      ├─── LCD EN
                     └─────────────────────────┘
+![Circuit Diagram](pic.png)
 
 
 LCD 16x2:
