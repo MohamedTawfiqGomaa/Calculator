@@ -1018,6 +1018,7 @@ while(1) {
 
 ![Circuit Diagram](pic.png)
 ![Circuit Diagram](proteus.png)
+![Circuit Diagram](Connections.png)
 ---
 
 
