@@ -847,7 +847,7 @@ while(1) {
               VSS  ┤19 GND      RD6 27      ├─── LCD RS
               VDD  ┤20 5V       RD7 28      ├─── LCD EN
                     └─────────────────────────┘
-![Circuit Diagram](pic.png)
+
 
 
 LCD 16x2:
@@ -870,8 +870,9 @@ Power Supply:
 9V Battery → IN[7805]OUT → 5V
 [100µF] و [0.1µF] بين OUT وGND
 ```
-
+![Circuit Diagram](pic.png)
 ---
+
 
 ## 14. استكشاف الأخطاء
 
