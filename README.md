@@ -823,6 +823,7 @@ while(1) {
 ## 13. مخطط التوصيل الكامل
 
 ![Circuit Diagram](pic.png)
+![Circuit Diagram](proteus.png)
 ---
 
 
