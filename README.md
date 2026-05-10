@@ -818,34 +818,11 @@ while(1) {
 
 في مشروع الحاسبة البسيط، مش محتاجين الـ PIC يعمل حاجة تانية → Polling أبسط وكافي.
 
+
+
 ---
 
 ## 13. مخطط التوصيل الكامل
-
-```
-╔══════════════════════════════════════════════════════════════════════╗
-║                    PIC16F877A - PIN MAPPING                        ║
-╠══════════════════════════════════════════════════════════════════════╣
-║ MCLR/VPP  (1)  → Reset Circuit (10K → +5V)         RB7  (40) → C4 ║
-║ RA0/AN0   (2)  → Available                          RB6  (39) → C3 ║
-║ RA1/AN1   (3)  → Available                          RB5  (38) → C2 ║
-║ RA2/AN2   (4)  → Available                          RB4  (37) → C1 ║
-║ RA3/AN3   (5)  → Available                          RB3  (36) → LCD D3 ║
-║ RA4/T0CKI (6)  → Available                          RB2  (35) → LCD D2 ║
-║ RA5/AN4   (7)  → Available                          RB1  (34) → LCD D1 ║
-║ RE0/AN5   (8)  → Available                          RB0  (33) → LCD D0 ║
-║ RE1/AN6   (9)  → Available                          VDD  (32) → +5V ║
-║ RE2/AN7  (10)  → Available                          VSS  (31) → GND ║
-║ VDD       (11) → +5V                                RD7  (30) → LCD EN ║
-║ VSS       (12) → GND                                RD6  (29) → LCD RS ║
-║ OSC1      (13) → 20MHz Crystal                      RD5  (28) → LCD D7 ║
-║ OSC2      (14) → 20MHz Crystal                      RD4  (27) → LCD D6 ║
-║ RC0       (15) → Keypad Row 1                       RD3  (22) → LCD D5 ║
-║ RC1       (16) → Keypad Row 2                       RD2  (21) → LCD D4 ║
-║ RC2/CCP1  (17) → Keypad Row 3                       RD1  (20) → Available ║
-║ RC3/SCK   (18) → Keypad Row 4                       RD0  (19) → Available ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
                          PIC16F877A (DIP40)
                    ┌─────────────────────────┐
       MCLR ─[10kΩ]─┤1  MCLR           RB7 40 ├─── LCD D7
@@ -891,6 +868,33 @@ Pin8(Col4)→RC7→[10kΩ]→5V
 Power Supply:
 9V Battery → IN[7805]OUT → 5V
 [100µF] و [0.1µF] بين OUT وGND
+```
+
+```text
+                                    PIC16F877A - PIN MAPPING
+                
+                        ┌─────────────────────────────────────────────┐
+                MCLR/VPP  1 ── Reset (10K to +5V)          RB7/PGD 40 ── LCD D7
+                RA0/AN0   2                                RB6/PGC 39 ── LCD D6
+                RA1/AN1   3                                     RB5 38 ── LCD D5
+                RA2/AN2   4                                     RB4 37 ── LCD D4
+                RA3/AN3   5                                     RB3 36 ── LCD D3
+                RA4/T0CKI 6                                     RB2 35 ── LCD D2
+                RA5/AN4   7                                     RB1 34 ── LCD D1
+                RE0/AN5   8                                     RB0 33 ── LCD D0
+                RE1/AN6   9                                     VDD 32 ── +5V
+                RE2/AN7  10                                     VSS 31 ── GND
+                VDD       11 ── +5V                              RD7 30 ── LCD E
+                VSS       12 ── GND                              RD6 29 ── LCD RS
+                OSC1/CLKI 13 ── 20MHz Crystal                    RD5 28
+                OSC2/CLKO 14 ── 20MHz Crystal                    RD4 27
+                RC0/T1OSO 15 ── Keypad Row 1                RC7/RX 26 ── Keypad Column 4
+                RC1/T1OSI 16 ── Keypad Row 2                RC6/TX 25 ── Keypad Column 3
+                RC2/CCP1  17 ── Keypad Row 3               RC5/SDO 24 ── Keypad Column 2
+                RC3/SCK   18 ── Keypad Row 4               RC4/SDI 23 ── Keypad Column 1
+                RD0       19                                     RD3 22
+                RD1       20                                     RD2 21
+                        └─────────────────────────────────────────────┘
 ```
 
 ---
