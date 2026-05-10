@@ -818,14 +818,14 @@ while(1) {
 
 في مشروع الحاسبة البسيط، مش محتاجين الـ PIC يعمل حاجة تانية → Polling أبسط وكافي.
 
-
-
 ---
 
 ## 13. مخطط التوصيل الكامل
+
+```
                          PIC16F877A (DIP40)
-                   ┌─────────────────────────┐
-      MCLR ─[10kΩ]─┤1  MCLR           RB7 40 ├─── LCD D7
+                    ┌─────────────────────────┐
+      MCLR ─[10kΩ]─┤1  MCLR          RB7 40 ├─── LCD D7
                5V  │                  RB6 39 ├─── LCD D6
               RA0  ┤2                 RB5 38 ├─── LCD D5
               RA1  ┤3                 RB4 37 ├─── LCD D4
@@ -833,20 +833,20 @@ while(1) {
               RA3  ┤5                 RB2 35 ├─── LCD D2
               RA4  ┤6                 RB1 34 ├─── LCD D1
               RA5  ┤7                 RB0 33 ├─── LCD D0
-              VSS  ┤8 GND             VDD 32 ├─── 5V
-             OSC1  ┤9 ──[Crystal]──  OSC2 31 ┤
-                   │   20MHz+22pF×2       30 │RA7
-             RC0   ┤11 → Row1        VSS 31  ├─── GND
-             RC1   ┤12 → Row2        VDD 20  ├─── 5V
-             RC2   ┤13 → Row3        RD0 21  │
-             RC3   ┤14 → Row4        RD1 22  │
-    [10k]─5V─RC4   ┤15 ← Col1        RD2 23  │
-    [10k]─5V─RC5   ┤16 ← Col2        RD3 24  │
-    [10k]─5V─RC6   ┤17 ← Col3        RD4 25  │
-    [10k]─5V─RC7   ┤18 ← Col4        RD5 26  │
-              VSS  ┤19 GND       RD6 27      ├─── LCD RS
-              VDD  ┤20 5V        RD7 28      ├─── LCD EN
-                   └─────────────────────────┘
+              VSS  ┤8 GND         VDD 32    ├─── 5V
+             OSC1  ┤9 ──[Crystal]── OSC2 31 ┤
+                   │   20MHz+22pF×2      30 │RA7
+             RC0   ┤11 → Row1       VSS 31  ├─── GND
+             RC1   ┤12 → Row2       VDD 20  ├─── 5V
+             RC2   ┤13 → Row3       RD0 21  │
+             RC3   ┤14 → Row4       RD1 22  │
+    [10k]─5V─RC4   ┤15 ← Col1       RD2 23  │
+    [10k]─5V─RC5   ┤16 ← Col2       RD3 24  │
+    [10k]─5V─RC6   ┤17 ← Col3       RD4 25  │
+    [10k]─5V─RC7   ┤18 ← Col4       RD5 26  │
+              VSS  ┤19 GND      RD6 27      ├─── LCD RS
+              VDD  ┤20 5V       RD7 28      ├─── LCD EN
+                    └─────────────────────────┘
 
 
 LCD 16x2:
@@ -868,33 +868,6 @@ Pin8(Col4)→RC7→[10kΩ]→5V
 Power Supply:
 9V Battery → IN[7805]OUT → 5V
 [100µF] و [0.1µF] بين OUT وGND
-```
-
-```text
-                                    PIC16F877A - PIN MAPPING
-                
-                        ┌─────────────────────────────────────────────┐
-                MCLR/VPP  1 ── Reset (10K to +5V)          RB7/PGD 40 ── LCD D7
-                RA0/AN0   2                                RB6/PGC 39 ── LCD D6
-                RA1/AN1   3                                     RB5 38 ── LCD D5
-                RA2/AN2   4                                     RB4 37 ── LCD D4
-                RA3/AN3   5                                     RB3 36 ── LCD D3
-                RA4/T0CKI 6                                     RB2 35 ── LCD D2
-                RA5/AN4   7                                     RB1 34 ── LCD D1
-                RE0/AN5   8                                     RB0 33 ── LCD D0
-                RE1/AN6   9                                     VDD 32 ── +5V
-                RE2/AN7  10                                     VSS 31 ── GND
-                VDD       11 ── +5V                              RD7 30 ── LCD E
-                VSS       12 ── GND                              RD6 29 ── LCD RS
-                OSC1/CLKI 13 ── 20MHz Crystal                    RD5 28
-                OSC2/CLKO 14 ── 20MHz Crystal                    RD4 27
-                RC0/T1OSO 15 ── Keypad Row 1                RC7/RX 26 ── Keypad Column 4
-                RC1/T1OSI 16 ── Keypad Row 2                RC6/TX 25 ── Keypad Column 3
-                RC2/CCP1  17 ── Keypad Row 3               RC5/SDO 24 ── Keypad Column 2
-                RC3/SCK   18 ── Keypad Row 4               RC4/SDI 23 ── Keypad Column 1
-                RD0       19                                     RD3 22
-                RD1       20                                     RD2 21
-                        └─────────────────────────────────────────────┘
 ```
 
 ---
