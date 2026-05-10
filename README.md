@@ -822,54 +822,6 @@ while(1) {
 
 ## 13. مخطط التوصيل الكامل
 
-```
-                         PIC16F877A (DIP40)
-                    ┌─────────────────────────┐
-      MCLR ─[10kΩ]─┤1  MCLR          RB7 40 ├─── LCD D7
-               5V  │                  RB6 39 ├─── LCD D6
-              RA0  ┤2                 RB5 38 ├─── LCD D5
-              RA1  ┤3                 RB4 37 ├─── LCD D4
-              RA2  ┤4                 RB3 36 ├─── LCD D3
-              RA3  ┤5                 RB2 35 ├─── LCD D2
-              RA4  ┤6                 RB1 34 ├─── LCD D1
-              RA5  ┤7                 RB0 33 ├─── LCD D0
-              VSS  ┤8 GND         VDD 32    ├─── 5V
-             OSC1  ┤9 ──[Crystal]── OSC2 31 ┤
-                   │   20MHz+22pF×2      30 │RA7
-             RC0   ┤11 → Row1       VSS 31  ├─── GND
-             RC1   ┤12 → Row2       VDD 20  ├─── 5V
-             RC2   ┤13 → Row3       RD0 21  │
-             RC3   ┤14 → Row4       RD1 22  │
-    [10k]─5V─RC4   ┤15 ← Col1       RD2 23  │
-    [10k]─5V─RC5   ┤16 ← Col2       RD3 24  │
-    [10k]─5V─RC6   ┤17 ← Col3       RD4 25  │
-    [10k]─5V─RC7   ┤18 ← Col4       RD5 26  │
-              VSS  ┤19 GND      RD6 27      ├─── LCD RS
-              VDD  ┤20 5V       RD7 28      ├─── LCD EN
-                    └─────────────────────────┘
-
-
-
-LCD 16x2:
-Pin1(VSS)→GND | Pin2(VDD)→5V | Pin3(VEE)→POT وسط
-Pin4(RS)→RD6  | Pin5(RW)→GND | Pin6(EN)→RD7
-Pin7-14(D0-D7)→RB0-RB7
-Pin15(A)→[220Ω]→5V | Pin16(K)→GND
-
-
-Keypad 4×4:
-Pin1(Row1)→RC0 | Pin2(Row2)→RC1
-Pin3(Row3)→RC2 | Pin4(Row4)→RC3
-Pin5(Col1)→RC4→[10kΩ]→5V
-Pin6(Col2)→RC5→[10kΩ]→5V
-Pin7(Col3)→RC6→[10kΩ]→5V
-Pin8(Col4)→RC7→[10kΩ]→5V
-
-
-Power Supply:
-9V Battery → IN[7805]OUT → 5V
-[100µF] و [0.1µF] بين OUT وGND
-```
 ![Circuit Diagram](pic.png)
 ---
 
