@@ -1101,3 +1101,7 @@ while(1) {
 
 *تم بناء هذا المشروع خطوة بخطوة — الكود مختبر على Proteus ومشتغل على الهارد وير الفعلي*  
 *المعلومات الأكاديمية مستخرجة من محاضرات RTES — Dr. Rania F. Ahmed*
+
+
+*This project was Developed and engineered by Titonix.*
+![Circuit Diagram](Titonix.png)
